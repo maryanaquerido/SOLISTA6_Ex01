@@ -38,12 +38,12 @@ public class ControllerCavaleiros extends Thread {
 				CavaleiroAnda();
 				
 				if ((posicao >= posicaoTocha) && (posicao < posicaoPedra) && semaforoTocha.tryAcquire()) {
-					velocidade =+ 2;
+					velocidade += 2;
 					System.out.println ("Cavaleiro #" + tidCavaleiro + " pegou a tocha. Velocidade = " + velocidade);
 				}
 				
 				if ((posicao >= posicaoPedra) && semaforoPedra.tryAcquire()) {
-					velocidade =+ 2;
+					velocidade += 2;
 					System.out.println ("Cavaleiro #" + tidCavaleiro + " pegou a pedra. Velocidade = " + velocidade);
 				}
 				
